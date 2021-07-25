@@ -1,0 +1,11 @@
+*.aux
+tesis*.pdf
+*.log
+*.toc
+*.synctex.gz
+*.out
+
+*build/
+/guardar
+
+*/esto_no/
