@@ -66,7 +66,7 @@ escala = {'S': 0.1 , 'P1/2':1, 'P3/2':1,}
 
 escala_optica = 1/300000*2
 
-fig,ax = plt.subplots(1,1, figsize=(12,7))
+fig,ax = plt.subplots(1,1, figsize=(12,7),  constrained_layout=True )
 
 pls = {}
 
@@ -131,8 +131,7 @@ ax.spines['top'].set_visible(False)
 ax.spines['bottom'].set_visible(False)
 
 
-
-
+# fig.savefig('graficar_estructura_01.png')
 
 #%%
 
@@ -141,7 +140,7 @@ from matplotlib.widgets import Slider, Button, RadioButtons
 
 
 gs_kw   = dict(width_ratios=[1], height_ratios=[10,1])
-fig,axx = plt.subplots(2,1,figsize=(12,7), gridspec_kw=gs_kw )
+fig,axx = plt.subplots(2,1,figsize=(12,7), gridspec_kw=gs_kw ,   constrained_layout=True  )
 
 
 
@@ -228,6 +227,7 @@ sl.on_changed(update)
 
 
 
+# fig.savefig('graficar_estructura_02.png')
 
 
 
@@ -294,10 +294,12 @@ escala_optica = 1/300000
 polarizacion = +1
 
 
+indice = 3
+
 for i0 in [0,1]:
     for i1 in [0,1]:
         
-        fig,axx = plt.subplots(1,2, figsize=(8,5))
+        fig,axx = plt.subplots(1,2, figsize=(8,5),  constrained_layout=True )
         
         pls = {}
         
@@ -398,6 +400,10 @@ for i0 in [0,1]:
         
         #plt.pause(0.1)
         #fig.savefig('20190825_'+str(i0)+str(i1)+'.png')
+        indice += 1
+        fig.savefig(f'graficar_estructura_{indice:02d}.png')
+
+
         
 
 
