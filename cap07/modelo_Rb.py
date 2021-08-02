@@ -570,9 +570,9 @@ class ATOM():
             ax.set_xlabel(r'$\Delta \nu$ [MHz]')
             ax.set_ylabel(r'$\sigma_0$ [$\mu$m${}^2$]')
         
-        custom_lines = [Line2D([0], [0], color='C0', lw=4),
-                        Line2D([0], [0], color='C1', lw=4)]
-        ax.legend(custom_lines, ['${}^{85}$Rb','${}^{87}$Rb'], loc='best')
+            custom_lines = [Line2D([0], [0], color='C0', lw=4),
+                            Line2D([0], [0], color='C1', lw=4)]
+            ax.legend(custom_lines, ['${}^{85}$Rb','${}^{87}$Rb'], loc='best')
         return ax
 
 

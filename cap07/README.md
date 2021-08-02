@@ -5,9 +5,9 @@ Se desarrolló un modelo aproximado para predecir el espectro de absorción de u
   * Modelo de cálculo: [modelo_Rb.py](modelo_Rb.py)
   * Parámetros para el Rubidio: [Rb.json](Rb.json)
 
-Ejemplos de espectro obtenidos
+Ejemplos de espectros obtenidos
 
-## Espectro de absorción para diferentes temperaturas
+## Espectro de absorción para diferentes intensidades
 
 <img src="modelo_Rb_01.png" alt="IMAGE ALT TEXT HERE"  border="10" />
 
@@ -61,7 +61,7 @@ fig.suptitle(f"Espectro de absorción Rb para diferentes intensidades del láser
 
 ---------
 
-## Espectro de absorción para diferentes intensidades
+## Espectro de absorción para diferentes temperaturas
 
 <img src="modelo_Rb_02.png" alt="IMAGE ALT TEXT HERE"  border="10" />
 
