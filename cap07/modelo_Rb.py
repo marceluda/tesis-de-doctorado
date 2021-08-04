@@ -502,8 +502,10 @@ class ATOM():
                         
                         # Es la expresión que está en Steck, y que surge de corregir la saturación para 3 niveles
                         # http://steck.us/alkalidata
-                        
-                        sigma     = hbar*nu*2*pi*gamma_eff/2/Isat_tmp /9
+                                                
+                        sigma     = 8*pi*cef*DM**2*a0**2*SFFp * nu*2*pi/gamma_eff
+                        sigma    *= (2*Fip+1)/ (2*Fi+1) 
+                        sigma    *= 1/9  # Factor de correccion por polarización
                                                 
                         # Caluclo valores de cada transicion y los guardo en cada array
                         nu_i    += [ nu                                  ]
