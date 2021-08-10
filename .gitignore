@@ -9,3 +9,5 @@ tesis*.pdf
 /guardar
 
 */esto_no/
+
+*__pycache__*
