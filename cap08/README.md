@@ -1,6 +1,6 @@
 # Capítulo 8: Modelo de atrapamiento coherente de población (CPT)
 
-Se desarrolló un modelo para obtener la evolución de la matriz densidad que describe a un átomo de 3 niveles o de 11 niveles, cuando interactúa con un haz láser bicromático en condición de resonancia Raman.
+Se desarrolló un modelo para obtener la evolución de la [matriz densidad](https://en.wikipedia.org/wiki/Density_matrix) que describe a un átomo de 3 niveles o de 11 niveles, cuando interactúa con un haz láser bicromático en condición de resonancia Raman.
 Se busca reproducir el efecto de [transparencia inducida por CPT](https://en.wikipedia.org/wiki/Dark_state).
 
 El modelo está basado en el trabajo de:
@@ -10,7 +10,6 @@ excitation schemes for a compact coherent population trapping Rb vapor clock”*
 
   * Modelo de cálculo: [modelo_Rb.py](modelo_Rb.py)
   * Parámetros para el Rubidio: [Rb.json](Rb.json)
-
 
 ## Modelo de 3 niveles
 
