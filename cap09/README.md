@@ -28,7 +28,7 @@ El de barrido por una entrada BNC o por otro PWM. Los canale se configuran media
 
 <p align="center">
 <strong>
-<a href="DriverPZT">cap09/DriverPZT</a>
+<a href="DriverPZT">Driver PZT</a>
 </strong>
 </p>
 
@@ -49,7 +49,27 @@ Tiene un control de off-set t un control de barrido, que incluye atenuación var
 
 <p align="center">
 <strong>
-<a href="DriverFL500">cap09/DriverFL500</a>
+<a href="DriverFL500">Driver Corriente</a>
+</strong>
+</p>
+
+-------
+
+
+### Controlador de Temperatura
+
+Es un circuito de realimentación negativa con un controlador PID para estabilizar la temperatura del láser. Actúa sobre una celda Peltier y sensa un terminstor, que es comparado con una tensión de referencia.
+
+
+<img src="DriverTEC_brd.png" alt="IMAGE ALT TEXT HERE"  border="10" />
+<img src="DriverTEC_sch1.png" alt="IMAGE ALT TEXT HERE"  border="10" width='250px' />
+<img src="DriverTEC_sch2.png" alt="IMAGE ALT TEXT HERE"  border="10" width='250px'  />
+
+-------
+
+<p align="center">
+<strong>
+<a href="TEC_controller">Driver TEC</a>
 </strong>
 </p>
 
