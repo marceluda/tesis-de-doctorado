@@ -26,10 +26,10 @@ El de barrido por una entrada BNC o por otro PWM. Los canale se configuran media
 
 -------
 
-<center>
+<p align="center">
 <strong>
 <a href="cap09/DriverPZT">cap09/DriverPZT</a>
 </strong>
-</center>
+</p>
 
 -------
