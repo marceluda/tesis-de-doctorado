@@ -74,7 +74,7 @@ Es un circuito de realimentación negativa con un controlador PID para estabiliz
 -------
 
 
-## Controlador centra basado en Arduino
+## Controlador central basado en Arduino
 
 Es un *shield* para [Arduino MEGA 2560](https://store.arduino.cc/usa/mega-2560-r3) que permite incorporarle:
 
