@@ -42,8 +42,7 @@ Tiene un control de off-set t un control de barrido, que incluye atenuación var
 
 
 <img src="DriverCorriente_sch.png" alt="IMAGE ALT TEXT HERE"  border="10" />
-<img src="DriverCorriente_brd1.png" alt="IMAGE ALT TEXT HERE"  border="10" width='250px' />
-<img src="DriverCorriente_brd2.png" alt="IMAGE ALT TEXT HERE"  border="10" width='250px'  />
+<img src="DriverCorriente_brd1.png" alt="IMAGE ALT TEXT HERE"  border="10" width='250px' /> <img src="DriverCorriente_brd2.png" alt="IMAGE ALT TEXT HERE"  border="10" width='250px'  />
 
 -------
 
@@ -62,14 +61,36 @@ Es un circuito de realimentación negativa con un controlador PID para estabiliz
 
 
 <img src="DriverTEC_brd.png" alt="IMAGE ALT TEXT HERE"  border="10" />
-<img src="DriverTEC_sch1.png" alt="IMAGE ALT TEXT HERE"  border="10" width='250px' />
-<img src="DriverTEC_sch2.png" alt="IMAGE ALT TEXT HERE"  border="10" width='250px'  />
+<img src="DriverTEC_sch1.png" alt="IMAGE ALT TEXT HERE"  border="10" width='250px' /><img src="DriverTEC_sch2.png" alt="IMAGE ALT TEXT HERE"  border="10" width='250px'  />
 
 -------
 
 <p align="center">
 <strong>
 <a href="TEC_controller">Driver TEC</a>
+</strong>
+</p>
+
+-------
+
+
+## Controlador centra basado en Arduino
+
+Es un *shield* para [Arduino MEGA 2560](https://store.arduino.cc/usa/mega-2560-r3) que permite incorporarle:
+
+  * Generador de barridos traingulares
+  * ADC con amplificación y offset
+
+<img src="shield-control_sch.png" alt="IMAGE ALT TEXT HERE"  border="10" />
+<img src="shield-control_brd1.png" alt="IMAGE ALT TEXT HERE"  border="10" width='250px' /><img src="shield-control_brd2.png" alt="IMAGE ALT TEXT HERE"  border="10" width='250px'  />
+
+
+
+-------
+
+<p align="center">
+<strong>
+<a href="shield-control">Arduino Shield-Control</a>
 </strong>
 </p>
 
