@@ -1,0 +1,239 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: EAGLE Drawing /home/lolo/eagle/DriverPZT/driverPZT_01.brd
+%%Creator: EAGLE
+%%Pages: 1
+%%BoundingBox: 0 0 289 292
+%%EndComments
+
+% Coordinate transfer:
+
+/EU { 254 div 0.072 mul } def
+/inch { 72 mul } def
+
+% Linestyle:
+
+1 setlinecap
+1 setlinejoin
+
+% Drawing functions:
+
+/l {  % draw a line
+   /lw exch def
+   /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   newpath
+   x1 EU y1 EU moveto
+   x2 EU y2 EU lineto
+   lw EU setlinewidth
+   stroke
+   } def
+
+/h {  % draw a hole
+   /d  exch def
+   /y  exch def
+   /x  exch def
+   d 0 gt {
+     newpath
+     x EU y EU d 2 div EU 0 360 arc
+     currentgray dup
+     1 exch sub setgray
+     fill
+     setgray
+     } if
+   } def
+
+/b {  % draw a bar
+   /an exch def
+   /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   /w2 x2 x1 sub 2 div EU def
+   /h2 y2 y1 sub 2 div EU def
+   gsave
+   x1 x2 add 2 div EU y1 y2 add 2 div EU translate
+   an rotate
+   newpath
+   w2     h2     moveto
+   w2 neg h2     lineto
+   w2 neg h2 neg lineto
+   w2     h2 neg lineto
+   closepath
+   fill
+   grestore
+   } def
+
+/c {  % draw a circle
+   /lw exch def
+   /rd exch def
+   /y  exch def
+   /x  exch def
+   newpath
+   lw EU setlinewidth
+   x EU y EU rd EU 0 360 arc
+   stroke
+   } def
+
+/a {  % draw an arc
+   /lc exch def
+   /ae exch def
+   /as exch def
+   /lw exch def
+   /rd exch def
+   /y  exch def
+   /x  exch def
+   lw rd 2 mul gt {
+     /rd rd lw 2 div add 2 div def
+     /lw rd 2 mul def
+     } if
+   currentlinecap currentlinejoin
+   lc setlinecap 0 setlinejoin
+   newpath
+   lw EU setlinewidth
+   x EU y EU rd EU as ae arc
+   stroke
+   setlinejoin setlinecap
+   } def
+
+/p {  % draw a pie
+   /d exch def
+   /y exch def
+   /x exch def
+   newpath
+   x EU y EU d 2 div EU 0 360 arc
+   fill
+   } def
+
+/edge { 0.20710678119 mul } def
+
+/o {  % draw an octagon
+   /an exch def
+   /dy exch def
+   /dx exch def
+   /y  exch def
+   /x  exch def
+   gsave
+   x EU y EU translate
+   an dx dy lt { 90 add /dx dy /dy dx def def } if rotate
+   newpath
+      0 dx 2 div sub EU                    0 dy edge  add EU moveto
+      0 dx dy sub 2 div sub dy edge sub EU 0 dy 2 div add EU lineto
+      0 dx dy sub 2 div add dy edge add EU 0 dy 2 div add EU lineto
+      0 dx 2 div add EU                    0 dy edge  add EU lineto
+      0 dx 2 div add EU                    0 dy edge  sub EU lineto
+      0 dx dy sub 2 div add dy edge add EU 0 dy 2 div sub EU lineto
+      0 dx dy sub 2 div sub dy edge sub EU 0 dy 2 div sub EU lineto
+      0 dx 2 div sub EU                    0 dy edge  sub EU lineto
+   closepath
+   fill
+   grestore
+   } def
+
+7620 17720 1007620 17720 0 l
+1007620 17720 1007620 817720 0 l
+1007620 817720 7620 817720 0 l
+7620 817720 7620 17720 0 l
+75720 436820 16764 p
+75720 82620 16764 p
+934720 82620 16764 p
+934720 436820 16764 p
+100720 347620 16764 p
+100720 247620 16764 p
+100720 297620 16764 p
+100720 197620 16764 p
+100720 157620 16764 p
+100720 117620 16764 p
+883920 232620 16764 p
+883920 142620 16764 p
+642620 703520 13208 13208 0.0 o
+642620 576520 13208 13208 0.0 o
+706120 614620 13208 13208 0.0 o
+706120 665420 13208 13208 0.0 o
+541020 747716 541020 760924 13208 l
+490220 747716 490220 760924 13208 l
+515620 747716 515620 760924 13208 l
+668020 747208 668020 761432 14224 l
+642620 747208 642620 761432 14224 l
+617220 545532 617220 531308 14224 l
+591820 545532 591820 531308 14224 l
+566420 545532 566420 531308 14224 l
+160020 690820 14080 p
+134620 690820 14080 p
+109220 741620 10000 0 c
+210820 741620 10000 0 c
+858520 690820 14080 p
+833120 690820 14080 p
+807720 741620 10000 0 c
+909320 741620 10000 0 c
+45720 558232 45720 544008 14224 l
+71120 558232 71120 544008 14224 l
+388620 747208 388620 761432 14224 l
+363220 747208 363220 761432 14224 l
+363220 716220 13208 13208 0.0 o
+363220 589220 13208 13208 0.0 o
+299720 627320 13208 13208 0.0 o
+299720 678120 13208 13208 0.0 o
+401320 531308 401320 545532 14224 l
+426720 531308 426720 545532 14224 l
+452120 531308 452120 545532 14224 l
+553720 601920 13208 p
+553720 627320 13208 p
+477520 627320 13208 p
+477520 601920 13208 p
+553720 652720 13208 p
+553720 678120 13208 p
+477520 652720 13208 p
+477520 678120 13208 p
+452120 754320 15240 15240 0.0 o
+439420 601920 15240 15240 0.0 o
+75720 436820 10000 h
+75720 82620 10000 h
+934720 82620 10000 h
+934720 436820 10000 h
+100720 347620 10000 h
+100720 247620 10000 h
+100720 297620 10000 h
+100720 197620 10000 h
+100720 157620 10000 h
+100720 117620 10000 h
+883920 232620 10000 h
+883920 142620 10000 h
+642620 703520 8128 h
+642620 576520 8128 h
+706120 614620 8128 h
+706120 665420 8128 h
+541020 754320 8128 h
+490220 754320 8128 h
+515620 754320 8128 h
+668020 754320 9144 h
+642620 754320 9144 h
+617220 538420 9144 h
+591820 538420 9144 h
+566420 538420 9144 h
+160020 690820 9000 h
+134620 690820 9000 h
+858520 690820 9000 h
+833120 690820 9000 h
+45720 551120 9144 h
+71120 551120 9144 h
+388620 754320 9144 h
+363220 754320 9144 h
+363220 716220 8128 h
+363220 589220 8128 h
+299720 627320 8128 h
+299720 678120 8128 h
+401320 538420 9144 h
+426720 538420 9144 h
+452120 538420 9144 h
+553720 601920 8128 h
+553720 627320 8128 h
+477520 627320 8128 h
+477520 601920 8128 h
+553720 652720 8128 h
+553720 678120 8128 h
+477520 652720 8128 h
+477520 678120 8128 h
+452120 754320 10160 h
+439420 601920 10160 h
