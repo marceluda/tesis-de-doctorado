@@ -119,7 +119,7 @@ Se programó el dispositivo para correr un [centro de comandos](command_center) 
 # >=5 --> info irrelevante
 
 
-./Comandos
+Comandos
 
 get -----> P(2-13)  ---> Trae ultimo valor seteado al pin Px
       |--> D(24-29) ---> Lee valor digital del pin Dx
@@ -135,7 +135,7 @@ trig ---> (off||up||down) ---> Habilita el trigger en el pin 19 para subida, baj
 
 binary --> (num)          ---> Si num>0 habilita el modo binario. Sino, lo deshabilita.
 
-vref ---> (num)   ---> Cambia la tension de referencia del ADC
+vref ---> (num)   ---> Cambia la tensión de referencia del ADC
                           |--> num=1  ---> Vref=1.1V
                           |--> num=2  ---> Vref=2.56V
                           |--> num=9  ---> Vref externo
@@ -145,7 +145,7 @@ curv  ----> A(0-4)   ---> Levanta NN puntos del pin Ax
 
 curv2 ----> A(0-4) ----> D(19-20||30-39)   ---> Levanta NN puntos del pin Ax y otra de NN puntos del pin Dx
 
-En modo binario las respuestas son:
+# En modo binario las respuestas son:
 
 --> 0 EOT                    ---> Comando recibido
 --> 1 EOT Val EOT            ---> Envio de un integer binario
@@ -153,8 +153,6 @@ En modo binario las respuestas son:
 --> 9 EOT msg EOT            ---> Envio de un texto informativo
 
 ```
-
-
 
 
 
