@@ -108,9 +108,58 @@ Se programó el dispositivo para correr un [centro de comandos](command_center) 
 
 
 
+```graphql
+# Los comandos se componen de la siguiente estructura:
+# (comando)( )(param1)[ ][param2]
+# donde () implica obligatorio, [] opcional y ( ) es un white_space
+
+
+# debug modes
+# 0   --> nada de debug
+# >=5 --> info irrelevante
+
+
+./Comandos
+
+get -----> P(2-13)  ---> Trae ultimo valor seteado al pin Px
+      |--> D(24-29) ---> Lee valor digital del pin Dx
+      |--> D(30-39) ---> Trae ultimo valor seteado al pin Dx
+      |--> A(0-4)   ---> Lee valor analogico del pin Ax (pin x+54)
+
+set -----> P(2-13) (0-255) ---> Setea el PWM Px en un valor 0-255
+      |--> D(30-39) (0-1)  ---> Setea el pin digital Dx en un valor 0-1
+
+debug ---> (num)          ---> Setea el modo de debugging en el valor "num"
+
+trig ---> (off||up||down) ---> Habilita el trigger en el pin 19 para subida, bajada, o lo apaga
+
+binary --> (num)          ---> Si num>0 habilita el modo binario. Sino, lo deshabilita.
+
+vref ---> (num)   ---> Cambia la tension de referencia del ADC
+                          |--> num=1  ---> Vref=1.1V
+                          |--> num=2  ---> Vref=2.56V
+                          |--> num=9  ---> Vref externo
+                          |--> cualquier otro ---> Vref=Vcc~5V (DEFAULT)
+
+curv  ----> A(0-4)   ---> Levanta NN puntos del pin Ax
+
+curv2 ----> A(0-4) ----> D(19-20||30-39)   ---> Levanta NN puntos del pin Ax y otra de NN puntos del pin Dx
+
+En modo binario las respuestas son:
+
+--> 0 EOT                    ---> Comando recibido
+--> 1 EOT Val EOT            ---> Envio de un integer binario
+--> 2 EOT Num EOT Vals EOT   ---> Envio de Num integers binarios
+--> 9 EOT msg EOT            ---> Envio de un texto informativo
+
+```
+
+
+
+
 
 <details>
-<summary>Ejemplo de comando en Matlab</summary>
+<summary>Ejemplo de comando remoto en Matlab</summary>
 
 ```MATLAB
 
