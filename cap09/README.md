@@ -78,11 +78,17 @@ Es un circuito de realimentación negativa con un controlador PID para estabiliz
 
 Es un *shield* para [Arduino MEGA 2560](https://store.arduino.cc/usa/mega-2560-r3) que permite incorporarle:
 
-  * Generador de barridos traingulares
+  * Generador de barridos triangulares que incluye:
+    * Control de frecuencia
+    * Control de amplitud de barrido
+    * Control de off-set
   * ADC con amplificación y offset
+  * DACs a base de PWM y pasabajos
+
+### Diseño de circuito
 
 <img src="shield-control_sch.png" alt="IMAGE ALT TEXT HERE"  border="10" />
-<img src="shield-control_brd1.png" alt="IMAGE ALT TEXT HERE"  border="10" width='250px' /><img src="shield-control_brd2.png" alt="IMAGE ALT TEXT HERE"  border="10" width='250px'  />
+<img src="shield-control_brd1.png" alt="IMAGE ALT TEXT HERE"  border="10" width='250px' /> <img src="shield-control_brd2.png" alt="IMAGE ALT TEXT HERE"  border="10" width='250px'  />
 
 
 
@@ -95,3 +101,81 @@ Es un *shield* para [Arduino MEGA 2560](https://store.arduino.cc/usa/mega-2560-r
 </p>
 
 -------
+
+### Centro de comandos
+
+Se programó el dispositivo para correr un [centro de comandos](command_center) con comunicación serie para controlar el comportamiento del controlador, configurar parámetros y adquirir datos.
+
+
+
+
+<details>
+<summary>Ejemplo de comando en Matlab</summary>
+
+```MATLAB
+
+%s=serial('/dev/ttyACM1');
+s=serial('COM6');
+set(s,'BaudRate',57600);
+set(s,'InputBufferSize',4096);
+
+
+% Nota: para que el MATLAB lea correctamente el puerto es necesario
+%       crear un archivo en el home folder donde abre el matlab
+%       que en mi caso es /home/lolo
+%
+%       Archivo: java.opts
+%       -Dgnu.io.rxtx.SerialPorts=/dev/ttyS0:/dev/ttyS1:/dev/USB0:/dev/ttyACM0:/dev/ttyACM1
+%
+
+fopen(s)
+pause(2)
+leer(s)
+
+cmd(s,'binary 1')
+cmd(s,'trig up')
+cmd(s,'trig down')
+cmd(s,'trig off')
+
+
+leer(s)
+
+escribir(s,'\n')
+
+for i=1:20
+    plot(cmd(s,'curv A0')*5/1024,'.-')
+    pause(0.1)
+end
+
+escala=1024
+
+cmd(s,'ate 15')
+cmd(s,'set P9 115')
+
+[yy,tt]=curvA0(s);
+plot(tt,yy,'.-')
+plot(tt,smooth(yy),'.-')
+
+cmd(s,'vref 9')
+cmd(s,'delay 250 u')
+
+cmd(s,'set P10 150')
+cmd(s,'set P10 0')
+cmd(s,'set P9 100')
+
+cmd(s,'set D30 0')
+cmd(s,'set D32 0')
+cmd(s,'set D34 0')
+cmd(s,'set D36 1')
+
+cmd(s,'vref 5')
+cmd(s,'vref 1')
+
+tic()
+cmd(s,'curv2 A0 D26')
+toc()
+
+fclose(s)
+```
+
+</details>
