@@ -4,13 +4,17 @@ Se montó un sistema de actuadores para controlar un ECDL y realizar un experime
 
 <img src="esquema.png" alt="IMAGE ALT TEXT HERE"  border="10" />
 
+Se implementó un algoritmo de estabilización a un pozo de transmitancia, adquiriendo porciones del espectro en el entorno de longitud de onda del láser, realizando un ajuste lineal y corrigiendo la en función del valor de la pendiente. Aquí se puede ver una animación del programa en funcionamiento:
+
+<img src="animacion_lock.gif" alt="IMAGE ALT TEXT HERE"  border="10" />
+
 
 Para ello se debió controlar:
   - Corriente del láser
   - Temperatura del láser
   - Posición de la red de difracción, emdiante una tensión en un PZT
 
-Se desarrollaron circuitos controladores para cada una de estas variables físicas. También se desarrolló un sistema de instrumentación basado en Arduino.
+Se desarrollaron circuitos controladores para cada una de estas variables físicas. También se desarrolló un sistema de instrumentación basado en Arduino que funcionó como un comando central de operación.
 
 ## Controladores
 
