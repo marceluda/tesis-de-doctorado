@@ -10,9 +10,7 @@ Sincronizando la variación de corriente y tensión de PZT se hicieron barridos 
 
 En este video se muestra un barrido en el que se inicia la estabilización a uno de los modos, que permanece fijo hacia el final.
 
-<center>
-<img src="modos_FP.gif" alt="IMAGE ALT TEXT HERE"  border="1" />
-</center>
+<img src="modos_FP.gif" alt="IMAGE ALT TEXT HERE"  />
 
 
 En este gráfico se muestran las mediciones de intensidad de luz reflejada y demodulada (señal de error) y transmitida (in2) para dos condiciones: un barrido completo (azul) y el inicio de estabilización:
