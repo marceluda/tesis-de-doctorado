@@ -12,3 +12,5 @@ En este capítulo se midió el espectro de transparencia inducida por CPT y se i
 ## Medición de la variación del espectro con la amplitud de modulación
 
 <img src="anim_mod_amp.gif" alt="IMAGE ALT TEXT HERE"  border="10" />
+
+A diferencia de los gráficos de la tesis, este está expresado en diferencias de frecuencia respecto a la central del VCO (100 MHz).
