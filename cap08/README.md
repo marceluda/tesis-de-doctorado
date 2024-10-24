@@ -8,7 +8,7 @@ El modelo está basado en el trabajo de:
 excitation schemes for a compact coherent population trapping Rb vapor clock”*. En: Metrologia 54.4 (jun. de
 2017), págs. 418-431. DOI : [10.1088/1681-7575/aa72bb](https://doi.org/10.1088/1681-7575/aa72bb)
 
-  * Modelo de cálculo: [modelo_Rb.py](modelo_Rb.py)
+  * Modelo de cálculo: [modelo_Rb.py](../cap07/modelo_Rb.py)
   * Parámetros para el Rubidio: [Rb.json](Rb.json)
 
 ## Modelo de 3 niveles
